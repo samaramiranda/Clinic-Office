@@ -3,7 +3,7 @@ export default function conteudoRodape() {
     <hr/>
     <div id="footerContent">
       <div id="about">
-        <img src="./public/assets/imgs/logo.png" alt="logo">
+        <img src="/public/assets/imgs/logo.png" alt="logo">
         <p>O software ideal para otimizar e acompanhar o<br> crescimento de sua clínica</p>
       </div>
       <div id="location">
