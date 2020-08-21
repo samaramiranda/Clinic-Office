@@ -1,0 +1,14 @@
+:root {
+  --background-color: #6B87BF;
+}
+
+header{
+  background-color: var(--background-color);
+  padding: 3px;
+  text-align: center;
+}
+
+header p {
+  font-size: 50px;
+  color: white;
+}
