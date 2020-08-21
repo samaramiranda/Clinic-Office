@@ -1,0 +1,101 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap rel="stylesheet"');
+@import url("./module-footer.css");
+
+:root {
+  --background-color: #6B87BF;
+  --background-color-focus: #5977b3;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #f2f2f2;
+  font-family: 'Open Sans', sans-serif;
+  animation: fade 0.5s;
+}
+
+header{
+  background-color: var(--background-color);
+  margin-top: 0;
+  padding: 40px;
+  text-align: center;
+}
+
+header p {
+  font-size: 50px;
+  color: white;
+  margin-bottom: 0px;
+}
+
+div#data {
+  text-align: center;
+  display: grid;
+  width: 800px;
+  margin: 40px auto;
+}
+
+div#data input {
+  width: 300px;
+  padding: 6px;
+  font-size: 16px;
+  margin: 0 auto 50px;
+  border: 2px solid   rgba(107, 135, 191, 0.5);
+  border-radius: 4px;
+  outline: none;
+  transition: border-color 0.2s ease-in;
+  box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.288);
+
+}
+
+div#data input{
+  animation: move 0.7s;
+}
+
+div#data input:focus {
+  border: 2px solid var(--background-color-focus);
+}
+
+div#data button {
+  width: 100px;
+  margin: 0 auto;
+  background-color: var(--background-color);
+  padding: 7px;
+  font-size: 15px;
+  font-weight: bold;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+div#data button {
+  animation: move 0.9s;
+}
+
+div#data button:hover{
+  width: 105px;
+  background-color: var(--background-color-focus);
+}
+
+
+@keyframes fade {
+  from {
+    opacity: 0;
+    transform: scale(0.9);
+  }to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes move {
+  from { 
+    opacity: 0;
+    transform: translateX(-35%);
+  }to {
+    opacity: 1;
+    transform: translateX(0%);
+  }
+}
+

@@ -1,0 +1,32 @@
+footer hr {
+  width: 65%;
+  border: none;
+  border-top: 3px solid #cecece;
+  margin: 100px auto 30px;
+}
+
+footer div#footerContent{
+  line-height: 1.8;
+  margin: 0 8%;
+  display: flex;
+  justify-content: space-between;
+}
+
+footer div#location p::before {
+  content: '\f138';
+  color: #757575;
+  position: relative;
+  font-family: FontAwesome;
+  font-size: 16px;
+  right: 2px;
+}
+
+footer div#fixedFooter {
+  background-color: #e7e7e7;
+  /* padding: 30px;
+  position:fixed;
+  bottom:0;
+  width: 100%; */
+  margin: 20px 0 0 0;
+  padding: 35px;
+}
