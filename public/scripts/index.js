@@ -24,7 +24,7 @@ const handleButton = () => {
       }
     })
   } else {
-    localStorage.setItem("nome", input.value)
+    localStorage.setItem("name", input.value)
     location.href = "public/views/cadastro.html"
   }
 }
