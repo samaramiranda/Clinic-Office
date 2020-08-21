@@ -1,8 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap rel="stylesheet"');
 @import url("./module-footer.css");
+@import url("./header.css");
+@import url("./animation.css");
 
 :root {
-  --background-color: #6B87BF;
   --background-color-focus: #5977b3;
 }
 
@@ -12,19 +13,6 @@ body {
   background-color: #f2f2f2;
   font-family: 'Open Sans', sans-serif;
   animation: fade 0.5s;
-}
-
-header{
-  background-color: var(--background-color);
-  margin-top: 0;
-  padding: 40px;
-  text-align: center;
-}
-
-header p {
-  font-size: 50px;
-  color: white;
-  margin-bottom: 0px;
 }
 
 div#data {
@@ -44,7 +32,6 @@ div#data input {
   outline: none;
   transition: border-color 0.2s ease-in;
   box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.288);
-
 }
 
 div#data input{
@@ -57,7 +44,7 @@ div#data input:focus {
 
 div#data button {
   width: 100px;
-  margin: 0 auto;
+  margin: 0 auto 85px;
   background-color: var(--background-color);
   padding: 7px;
   font-size: 15px;
@@ -79,23 +66,4 @@ div#data button:hover{
 }
 
 
-@keyframes fade {
-  from {
-    opacity: 0;
-    transform: scale(0.9);
-  }to {
-    opacity: 1;
-    transform: scale(1);
-  }
-}
-
-@keyframes move {
-  from { 
-    opacity: 0;
-    transform: translateX(-35%);
-  }to {
-    opacity: 1;
-    transform: translateX(0%);
-  }
-}
 
