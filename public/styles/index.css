@@ -34,10 +34,6 @@ div#data input {
   box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.288);
 }
 
-div#data input{
-  animation: move 0.7s;
-}
-
 div#data input:focus {
   border: 2px solid var(--background-color-focus);
 }
@@ -56,14 +52,11 @@ div#data button {
   transition: 0.2s ease;
 }
 
-div#data button {
-  animation: move 0.9s;
+div#data input, button{
+  animation: move 1s;
 }
 
 div#data button:hover{
   width: 105px;
   background-color: var(--background-color-focus);
 }
-
-
-
