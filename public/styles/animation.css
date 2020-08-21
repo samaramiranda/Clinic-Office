@@ -1,5 +1,3 @@
-
-
 @keyframes fade {
   from {
     opacity: 0;
@@ -17,5 +15,17 @@
   }to {
     opacity: 1;
     transform: translateX(0%);
+  }
+}
+
+@keyframes nono {
+  0%, 100% { 
+    transform: translateX(0);
+  } 
+  35% {
+    transform: translateX(-15%);
+  }
+  70% {
+    transform: translateX(15%);
   }
 }

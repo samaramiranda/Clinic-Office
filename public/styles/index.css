@@ -38,6 +38,11 @@ div#data input:focus {
   border: 2px solid var(--background-color-focus);
 }
 
+div#data input.validate-error {
+  animation: nono 200ms linear, fade paused, move paused;
+  animation-iteration-count: 2;
+}
+
 div#data button {
   width: 100px;
   margin: 0 auto 85px;
@@ -52,11 +57,11 @@ div#data button {
   transition: 0.2s ease;
 }
 
-div#data input, button{
-  animation: move 0.9s;
-}
-
 div#data button:hover{
   width: 105px;
   background-color: var(--background-color-focus);
+}
+
+div#data input, button{
+  animation: move 0.9s;
 }

@@ -7,14 +7,26 @@ const button = document.querySelector("button")
 footer.innerHTML = `${footerContent()}`
 
 const handleInput = () => {
-  if(input.value.length == 100){
+  if (input.value.length == 100) {
     input.disabled = true
   }
 }
 
 const handleButton = () => {
-  localStorage.setItem("nome", input.value)
-  location.href = "public/views/cadastro.html"
+  if (input.value.trim() == "") {
+    input.classList.add("validate-error")
+  }
+  const formError = document.querySelector(".validate-error")
+  if (formError) {
+    formError.addEventListener("animationend", event => {
+      if (event.animationName == "nono") {
+        formError.classList.remove("validate-error")
+      }
+    })
+  } else {
+    localStorage.setItem("nome", input.value)
+    location.href = "public/views/cadastro.html"
+  }
 }
 
 input.addEventListener("keydown", handleInput)
