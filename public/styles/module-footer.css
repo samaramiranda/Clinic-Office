@@ -2,7 +2,7 @@ footer hr {
   width: 65%;
   border: none;
   border-top: 3px solid #cecece;
-  margin: 100px auto 30px;
+  margin: 0 auto 30px;
 }
 
 footer div#footerContent{
@@ -18,7 +18,7 @@ footer div#location p::before {
   position: relative;
   font-family: FontAwesome;
   font-size: 16px;
-  right: 2px;
+  right: 4px;
 }
 
 footer div#fixedFooter {
@@ -27,6 +27,6 @@ footer div#fixedFooter {
   position:fixed;
   bottom:0;
   width: 100%; */
-  margin: 20px 0 0 0;
+  margin-top: 20px;
   padding: 35px;
 }
