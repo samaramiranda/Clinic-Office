@@ -1,6 +1,7 @@
 import footerContent from "./module-footer.js"
 
 const footer = document.querySelector("footer")
+const form = document.querySelector("form")
 const name = document.querySelector("#name")
 const email = document.querySelector("#email")
 const phone = document.querySelector("#phone")
@@ -26,7 +27,6 @@ const validateEmail = (event) => {
     emailConfirm.disabled = false
     button.disabled=false
   }
-  return true
 }
 
 const confirmEmail = (event) => {
@@ -41,7 +41,6 @@ const confirmEmail = (event) => {
     event.target.parentNode.classList.add("error")
     button.disabled=true
   }
-  return true
 }
 
 const validateFields = (event) => {
