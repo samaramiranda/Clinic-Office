@@ -17,28 +17,18 @@ footer.innerHTML = `${footerContent()}`
 name.value = localStorage.getItem("name")
 
 
-const validateFields = (event) => {
-  if (event.target.value === "") {
-    event.target.parentNode.classList.add("error")
-  }else {
-    event.target.parentNode.classList.remove("error")
-  }
-  return
-}
-
 const validateEmail = (event) => {
   const regexEmail = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)*$/
   const emailValue = event.target.value
-  if(!emailValue.match(regexEmail)){
+  if (!emailValue.match(regexEmail)) {
     event.target.parentNode.classList.remove("sucess")
     event.target.parentNode.classList.add("error")
     emailConfirm.disabled = true
-  }else {
+  } else {
     event.target.parentNode.classList.remove("error")
     event.target.parentNode.classList.add("sucess")
     emailConfirm.disabled = false
   }
-  return
 }
 
 const confirmEmail = (event) => {
@@ -53,6 +43,17 @@ const confirmEmail = (event) => {
   }
 }
 
+const validateFields = (event) => {
+  if (event.target.value === "") {
+    return event.target.parentNode.classList.add("error")
+  } else if (event.target.id === "email") {
+    return validateEmail(event)
+  } else if (event.target.id === "emailConfirm"){
+    return confirmEmail(event)
+  }
+  return event.target.parentNode.classList.remove("error")
+}
+
 const phoneMask = () => {
   if (phone.value.length == 11) {
     phone.setAttribute("type", "text")
@@ -61,11 +62,8 @@ const phoneMask = () => {
   return
 }
 
-
-email.addEventListener("focusout", validateEmail)
-emailConfirm.addEventListener("focusout", confirmEmail)
-phone.addEventListener("keyup", phoneMask)
-
 inputs.forEach(elem => {
   elem.addEventListener("focusout", validateFields)
 })
+phone.addEventListener("keyup", phoneMask)
+
