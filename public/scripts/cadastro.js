@@ -1,15 +1,10 @@
 import footerContent from "./module-footer.js"
 
 const footer = document.querySelector("footer")
-const form = document.querySelector("form")
 const name = document.querySelector("#name")
 const email = document.querySelector("#email")
 const phone = document.querySelector("#phone")
 const emailConfirm = document.querySelector("#emailConfirm")
-const clinicName = document.querySelector("#clinicName")
-const state = document.querySelector("#state")
-const city = document.querySelector("#city")
-const plan = document.querySelector("#plan")
 const button = document.querySelector("button")
 const inputs = [...document.querySelectorAll("input")]
 
@@ -24,11 +19,14 @@ const validateEmail = (event) => {
     event.target.parentNode.classList.remove("sucess")
     event.target.parentNode.classList.add("error")
     emailConfirm.disabled = true
+    button.disabled=true
   } else {
     event.target.parentNode.classList.remove("error")
     event.target.parentNode.classList.add("sucess")
     emailConfirm.disabled = false
+    button.disabled=false
   }
+  return true
 }
 
 const confirmEmail = (event) => {
@@ -36,11 +34,14 @@ const confirmEmail = (event) => {
     event.target.parentNode.classList.remove("error")
     event.target.parentNode.classList.add("sucess")
     email.parentNode.classList.add("sucess")
+    button.disabled=false
   } else {
     event.target.parentNode.classList.remove("sucess")
     email.parentNode.classList.remove("sucess")
     event.target.parentNode.classList.add("error")
+    button.disabled=true
   }
+  return true
 }
 
 const validateFields = (event) => {
@@ -59,7 +60,6 @@ const phoneMask = () => {
     phone.setAttribute("type", "text")
     phone.value = phone.value.replace(/^(\d{2})(\d)(\d{4})(\d{4})/g, "($1) $2 $3-$4");
   }
-  return
 }
 
 inputs.forEach(elem => {
