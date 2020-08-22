@@ -1,0 +1,114 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap rel="stylesheet"');
+@import url("./footer.css");
+@import url("./header.css");
+@import url("./animation.css");
+
+:root {
+  --background-color-focus: #5977b3;
+}
+
+body {
+  background-color: #f2f2f2;
+  font-family: 'Open Sans', sans-serif;
+  margin: 0;
+  padding: 0;
+  animation: fade 0.5s;
+}
+
+header p {
+  margin-bottom: 0;
+}
+
+header p:nth-child(2) {
+  font-size: 20px;
+  margin: 2px 0 20px 0;
+}
+
+form {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 7px 25px;
+  max-width: 70%;
+  margin: 40px auto;
+  animation: move 0.8s;
+}
+
+form div.form-input {
+  display: flex;
+  flex-direction: column;
+}
+
+form div.form-input-line {
+  display: grid;
+  grid-column-start: 1;
+  grid-column-end: 3;
+}
+
+form label {
+  font-size: 13px;
+  color: #f30000;
+  visibility: hidden;
+}
+
+form input, select {
+  font-size: 16px;
+  padding: 6px;
+  border: 2px solid rgba(107, 135, 191, 0.5);
+  border-radius: 4px;
+  outline: none;
+  transition: border-color 0.2s ease-in;
+  box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.288);
+}
+
+form input[type=number]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+}
+
+form input[type=number] {
+  -moz-appearance: textfield;
+  appearance: textfield;
+}
+
+form select:invalid {
+  color: gray;
+}
+
+form input:focus, select:focus {
+  border: 2px solid var(--background-color-focus);
+}
+
+form button {
+  grid-column-start: 1;
+  grid-column-end: 3;
+  width: 100px;
+  margin: 0 auto 15px;
+  background-color: var(--background-color);
+  padding: 7px;
+  font-size: 15px;
+  font-weight: bold;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  outline: 0;
+  transition: 0.2s ease;
+}
+
+form button:hover {
+  width: 105px;
+  background-color: var(--background-color-focus);
+}
+
+div.error input{
+  border-color: red;
+}
+
+div.error label {
+  visibility: visible;
+}
+
+div.sucess input{
+  border-color: green;
+}
+
+

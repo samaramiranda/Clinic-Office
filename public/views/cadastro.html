@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../styles/cadastro.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <title>Cadastro</title>
+</head>
+
+<body>
+  <div id="app">
+    <header>
+      <p>Vamos Começar!</p>
+      <p>Por favor nos informe os seguintes dados...</p>
+    </header>
+
+    <form action="" method="GET">
+
+      <div class="form-input">
+        <label>Nome</label>
+        <input type="text" id="name" placeholder="Nome" disabled>
+      </div>
+      <div class="form-input">
+        <label>*Digite um e-mail válido.</label>
+        <input type="text" name="email" id="email" placeholder="E-mail">
+      </div>
+      <div class="form-input">
+        <label>*Digite um número de telefone.</label>
+        <input type="number" id="phone" placeholder="Telefone" maxlength="11">
+      </div>
+      <div class="form-input">
+        <label>*Os e-mails não conferem.</label>
+        <input type="text" id="emailConfirm" placeholder="Confirmar e-mail">
+      </div>
+      <div class="form-input-line">
+        <label>*Digite o nome da clínica</label>
+        <input type="text" id="clinicName" placeholder="Nome da Clínica">
+      </div>
+      <div class="form-input">
+        <label>*Selecione um estado</label>
+        <select id="state" required>
+          <option value="" disabled selected>Estado</option>
+          <option value="GO">GO</option>
+          <option value="MG">MG</option>
+        </select>      
+      </div>
+      <div class="form-input">
+        <label>*Selecione uma cidade</label>
+        <select id="city" required>
+          <option value="" disabled selected>Cidade</option>
+          <option value="Anapolis">Anapolis</option>
+          <option value="Lagoa">Lagoa</option>
+        </select>
+      </div>
+      <div class="form-input-line">
+        <label>*Selecione um plano</label>
+        <select id="plan" required>
+          <option value="" disabled selected>Plano</option>
+          <option value="plano1">Plano 1</option>
+          <option value="plano2">Plano 2</option>
+        </select>
+      </div>
+
+      <button type="submit">Continuar</button>
+    </form>
+
+    <footer></footer>
+  </div>
+  <script src="../scripts/cadastro.js" type="module"></script>
+</body>
+
+</html>
