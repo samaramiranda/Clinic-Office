@@ -1,4 +1,4 @@
-export default function conteudoRodape() {
+export default function footerContent() {
   return `
     <hr/>
     <div id="footerContent">
