@@ -4,7 +4,7 @@
 @import url("./animation.css");
 
 :root {
-  --background-color-focus: #5977b3;
+  --background-color-focus: #4a659b;
 }
 
 body {
@@ -81,7 +81,7 @@ form button {
   grid-column-start: 1;
   grid-column-end: 3;
   width: 100px;
-  margin: 0 auto 15px;
+  margin: 20px auto 15px;
   background-color: var(--background-color);
   padding: 7px;
   font-size: 15px;
@@ -99,16 +99,11 @@ form button:hover {
   background-color: var(--background-color-focus);
 }
 
-div.error input{
+div.error input, div.error select, div.error label {
+  visibility: visible;
   border-color: red;
 }
 
-div.error label {
-  visibility: visible;
-}
-
-div.sucess input{
+div.sucess input {
   border-color: green;
 }
-
-

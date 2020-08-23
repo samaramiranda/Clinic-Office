@@ -4,7 +4,7 @@
 @import url("./animation.css");
 
 :root {
-  --background-color-focus: #4f6aa0;
+  --background-color-focus: #4a659b;
 }
 
 body {
@@ -27,7 +27,7 @@ div#data input {
   padding: 6px;
   font-size: 16px;
   margin: 0 auto 50px;
-  border: 2px solid   rgba(107, 135, 191, 0.5);
+  border: 2px solid rgba(107, 135, 191, 0.5);
   border-radius: 4px;
   outline: none;
   transition: border-color 0.2s ease-in;
@@ -58,11 +58,11 @@ div#data button {
   transition: 0.2s ease;
 }
 
-div#data button:hover{
+div#data button:hover {
   width: 105px;
   background-color: var(--background-color-focus);
 }
 
-div#data input, button{
+div#data input, button {
   animation: move 0.9s;
 }

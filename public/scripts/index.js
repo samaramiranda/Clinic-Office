@@ -16,6 +16,7 @@ const handleButton = () => {
   if (input.value.trim() == "") {
     input.classList.add("validate-error")
   }
+  
   const formError = document.querySelector(".validate-error")
   if (formError) {
     formError.addEventListener("animationend", event => {
