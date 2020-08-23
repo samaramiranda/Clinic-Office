@@ -1,57 +1,59 @@
 import footerContent from "./module-footer.js"
 
 const footer = document.querySelector("footer")
-const form = document.querySelector("form")
 const name = document.querySelector("#name")
 const email = document.querySelector("#email")
 const phone = document.querySelector("#phone")
 const emailConfirm = document.querySelector("#emailConfirm")
 const button = document.querySelector("button")
+const state = document.querySelector("#state")
 const inputs = [...document.querySelectorAll("input")]
 
 footer.innerHTML = `${footerContent()}`
 name.value = localStorage.getItem("name")
 
-
 const validateEmail = (event) => {
+  const clientEmail = event.target
   const regexEmail = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)*$/
-  const emailValue = event.target.value
+  const emailValue = clientEmail.value
   if (!emailValue.match(regexEmail)) {
-    event.target.parentNode.classList.remove("sucess")
-    event.target.parentNode.classList.add("error")
+    clientEmail.parentNode.classList.remove("sucess")
+    clientEmail.parentNode.classList.add("error")
     emailConfirm.disabled = true
     button.disabled=true
   } else {
-    event.target.parentNode.classList.remove("error")
-    event.target.parentNode.classList.add("sucess")
+    clientEmail.parentNode.classList.remove("error")
+    clientEmail.parentNode.classList.add("sucess")
     emailConfirm.disabled = false
     button.disabled=false
   }
 }
 
 const confirmEmail = (event) => {
-  if (event.target.value === email.value) {
-    event.target.parentNode.classList.remove("error")
-    event.target.parentNode.classList.add("sucess")
+  const clientEmailConfirm = event.target
+  if (clientEmailConfirm.value === email.value) {
+    clientEmailConfirm.parentNode.classList.remove("error")
+    clientEmailConfirm.parentNode.classList.add("sucess")
     email.parentNode.classList.add("sucess")
     button.disabled=false
   } else {
-    event.target.parentNode.classList.remove("sucess")
-    email.parentNode.classList.remove("sucess")
-    event.target.parentNode.classList.add("error")
+    clientEmailConfirm.parentNode.classList.remove("sucess")
+    // email.parentNode.classList.remove("sucess")
+    clientEmailConfirm.parentNode.classList.add("error")
     button.disabled=true
   }
 }
 
 const validateFields = (event) => {
-  if (event.target.value === "") {
-    return event.target.parentNode.classList.add("error")
-  } else if (event.target.id === "email") {
+  const selectedField = event.target
+  if (selectedField.value === "") {
+    return selectedField.parentNode.classList.add("error")
+  } else if (selectedField.id === "email") {
     return validateEmail(event)
-  } else if (event.target.id === "emailConfirm"){
+  } else if (selectedField.id === "emailConfirm"){
     return confirmEmail(event)
   }
-  return event.target.parentNode.classList.remove("error")
+  return selectedField.parentNode.classList.remove("error")
 }
 
 const phoneMask = () => {
