@@ -1,9 +1,9 @@
 import footerContent from "./module-footer.js"
 
 const footer = document.querySelector("footer")
-const name = document.querySelector("#name")
-const phone = document.querySelector("#phone")
-const state = document.querySelector("#state")
+const name = document.querySelector('input[name="name"]')
+const phone = document.querySelector('input[name="phone"]')
+const state = document.querySelector('select[name="state"]')
 const button = document.querySelector("button")
 const inputs = [...document.querySelectorAll("input")]
 const selects = [...document.querySelectorAll("select")]
@@ -13,7 +13,7 @@ name.value = localStorage.getItem("name")
 
 const validateEmail = event => {
   const clientEmail = event.target
-  const emailConfirm = document.querySelector("#emailConfirm")
+  const emailConfirm = document.querySelector('input[name="emailConfirm"]')
   const regexEmail = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)*$/
   if (!clientEmail.value.match(regexEmail)) {
     clientEmail.parentNode.classList.remove("sucess")
@@ -30,7 +30,7 @@ const validateEmail = event => {
 
 const confirmEmail = event => {
   const clientEmailConfirm = event.target
-  const email = document.querySelector("#email")
+  const email = document.querySelector('input[name="email"]')
   if (clientEmailConfirm.value === email.value) {
     clientEmailConfirm.parentNode.classList.remove("error")
     clientEmailConfirm.parentNode.classList.add("sucess")
@@ -64,7 +64,7 @@ const populateUFs = (() => {
 })()
 
 const getCities = event => {
-  const city = document.querySelector("#city")
+  const city = document.querySelector('select[name="city"]')
   const ufValue = event.target.value
   const url = `https://servicodados.ibge.gov.br/api/v1/localidades/estados/${ufValue}/municipios`
 
@@ -86,9 +86,9 @@ const validateFields = event => {
   const selectedField = event.target
   if (selectedField.value === "") {
     return selectedField.parentNode.classList.add("error")
-  } else if (selectedField.id === "email") {
+  } else if (selectedField.name === "email") {
     return validateEmail(event)
-  } else if (selectedField.id === "emailConfirm") {
+  } else if (selectedField.name === "emailConfirm") {
     return confirmEmail(event)
   }
   return selectedField.parentNode.classList.remove("error")
