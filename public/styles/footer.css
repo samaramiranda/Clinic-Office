@@ -5,6 +5,10 @@ footer hr {
   margin: 0 auto 30px;
 }
 
+footer p {
+  color: #7c7c7c;
+}
+
 footer div#footerContent {
   line-height: 1.8;
   margin: 0 8%;
@@ -14,7 +18,7 @@ footer div#footerContent {
 
 footer div#location p::before {
   content: '\f138';
-  color: #a3a3a3;
+  color: #7c7c7c;
   position: relative;
   font-family: FontAwesome;
   font-size: 16px;
