@@ -11,6 +11,11 @@ const selects = [...document.querySelectorAll("select")]
 footer.innerHTML = `${footerContent()}`
 name.value = localStorage.getItem("name")
 
+const updateName = () => {
+  const newName = document.querySelector('input[name="name"]')
+  localStorage.setItem("name", newName.value)
+} 
+
 const validateEmail = event => {
   const clientEmail = event.target
   const emailConfirm = document.querySelector('input[name="emailConfirm"]')
@@ -101,6 +106,7 @@ selects.forEach(elem => {
   elem.addEventListener("focusout", validateFields)
 })
 
+name.addEventListener("change", updateName)
 phone.addEventListener("keyup", phoneMask)
 state.addEventListener("change", getCities)
 
