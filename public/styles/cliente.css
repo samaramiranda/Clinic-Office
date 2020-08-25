@@ -1,0 +1,50 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap rel="stylesheet"');
+@import url("./footer.css");
+@import url("./header.css");
+@import url("./animation.css");
+
+:root {
+  --background-color-focus: #4a659b;
+}
+
+body {
+  background-color: #f2f2f2;
+  font-family: 'Open Sans', sans-serif;
+  margin: 0;
+  padding: 0;
+  animation: fade 0.5s;
+}
+
+div#sucess {
+  margin: 35px auto 40px;
+  text-align: center;
+  font-weight: 600;
+}
+
+div#sucess img {
+  width: 150px;
+}
+
+div#sucess button {
+  margin: 30px;
+  background-color: var(--background-color);
+  padding: 8px;
+  font-size: 15px;
+  font-weight: bold;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  outline: 0;
+  transition: 0.2s ease;
+}
+
+div#sucess button:hover {
+  padding: 8px 11px;
+  margin: 30px 27px;
+  background-color: var(--background-color-focus);
+}
+
+div#sucess{
+  animation: move 0.9s;
+}
