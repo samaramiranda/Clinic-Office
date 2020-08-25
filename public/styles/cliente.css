@@ -48,3 +48,9 @@ div#sucess button:hover {
 div#sucess{
   animation: move 0.9s;
 }
+
+.body-hide {
+  animation: down 0.2s;
+  animation-fill-mode: forwards;
+  animation-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);
+}
