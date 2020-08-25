@@ -107,3 +107,9 @@ div.error input, div.error select, div.error label {
 div.sucess input {
   border-color: green;
 }
+
+div#app a {
+  color: var(--background-color);
+  display: flex;
+  justify-content: center;
+}
