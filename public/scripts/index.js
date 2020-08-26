@@ -7,14 +7,14 @@ const button = document.querySelector("button")
 footer.innerHTML = `${footerContent()}`
 
 const handleButton = () => {
-  if (input.value.trim() == "") {
+  if (input.value.trim() === "") {
     input.classList.add("validate-error")
   }
 
   const formError = document.querySelector(".validate-error")
   if (formError) {
     formError.addEventListener("animationend", event => {
-      if (event.animationName == "nono") {
+      if (event.animationName === "nono") {
         formError.classList.remove("validate-error")
       }
     })
