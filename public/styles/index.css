@@ -5,6 +5,8 @@
 
 :root {
   --background-color-focus: #4a659b;
+  --background-color-button: #60b49c;
+  --background-color-button-focus: #44927c;
 }
 
 body {
@@ -46,8 +48,8 @@ div#data input.validate-error {
 div#data button {
   width: 100px;
   margin: 0 auto 85px;
-  background-color: var(--background-color);
-  padding: 7px;
+  background-color: var(--background-color-button);
+  padding: 10px;
   font-size: 15px;
   font-weight: bold;
   color: #fff;
@@ -60,7 +62,7 @@ div#data button {
 
 div#data button:hover {
   width: 105px;
-  background-color: var(--background-color-focus);
+  background-color: var(--background-color-button-focus);
 }
 
 div#data input, button {

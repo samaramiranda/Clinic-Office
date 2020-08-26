@@ -3,10 +3,6 @@
 @import url("./header.css");
 @import url("./animation.css");
 
-:root {
-  --background-color-focus: #4a659b;
-}
-
 body {
   background-color: #f2f2f2;
   font-family: 'Open Sans', sans-serif;
@@ -28,8 +24,8 @@ div#error img {
 
 div#error button {
   margin: 100px 30px 30px 30px;
-  background-color: var(--background-color);
-  padding: 8px;
+  background-color: var(--background-color-button);
+  padding: 10px;
   font-size: 15px;
   font-weight: bold;
   color: #fff;
@@ -41,9 +37,9 @@ div#error button {
 }
 
 div#error button:hover {
-  padding: 8px 11px;
+  padding: 10px 13px;
   margin: 100px 27px 30px 27px;
-  background-color: var(--background-color-focus);
+  background-color: var(--background-color-button-focus);
 }
 
 div#error{

@@ -2,9 +2,6 @@
 @import url("./footer.css");
 @import url("./header.css");
 @import url("./animation.css");
-:root {
-  --background-color-focus: #4a659b;
-}
 
 body {
   background-color: #f2f2f2;
@@ -81,8 +78,8 @@ form button {
   grid-column-end: 3;
   width: 100px;
   margin: 20px auto 15px;
-  background-color: var(--background-color);
-  padding: 7px;
+  background-color: var(--background-color-button);
+  padding: 10px;
   font-size: 15px;
   font-weight: bold;
   color: #fff;
@@ -95,7 +92,7 @@ form button {
 
 form button:hover {
   width: 105px;
-  background-color: var(--background-color-focus);
+  background-color: var(--background-color-button-focus);
 }
 
 div.error input, div.error select, div.error label {
@@ -108,7 +105,7 @@ div.sucess input {
 }
 
 div#app a {
-  color: var(--background-color);
+  color: #6B87BF;
   display: flex;
   justify-content: center;
 }
