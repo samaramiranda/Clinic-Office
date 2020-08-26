@@ -1,4 +1,4 @@
-import footerContent from "./module-footer.js"
+import footerContent from "./modules/footer.js"
 
 const footer = document.querySelector("footer")
 const input = document.querySelector("input")
