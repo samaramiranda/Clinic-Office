@@ -1,3 +1,9 @@
+:root {
+  --background-color-focus: #4a659b;
+  --background-color-button: #60b49c;
+  --background-color-button-focus: #44927c;
+}
+
 footer hr {
   width: 65%;
   border: none;
