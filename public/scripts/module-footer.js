@@ -9,7 +9,7 @@ export default function footerContent() {
       <div id="location">
         <h3>Nossa Localização</h3>
         <p><strong>Endereço:</strong> Rua José Neto Paranhos Q39 L01 -<br> Sala 07, Jundiaí. Anápolis - GO</p>
-        <p><strong>Fone:</strong> (62) 9 92296531</p>
+        <p><strong>Fone:</strong> (62) 9 9229 6531</p>
         <p><strong>Email:</strong> atendimento@clinicoffice.com.br</p>
       </div>
     </div>
