@@ -3,6 +3,7 @@ import footerContent from "./module-footer.js"
 const footer = document.querySelector("footer")
 const name = document.querySelector('input[name="name"]')
 const phone = document.querySelector('input[name="phone"]')
+const emailConfirm = document.querySelector('input[name="emailConfirm"]')
 const state = document.querySelector('select[name="state"]')
 const button = document.querySelector("button")
 const inputs = [...document.querySelectorAll("input")]
@@ -18,39 +19,35 @@ const updateName = () => {
 
 const validateEmail = event => {
   const clientEmail = event.target
-  const emailConfirm = document.querySelector('input[name="emailConfirm"]')
   const regexEmail = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)*$/
-  if (!clientEmail.value.match(regexEmail)) {
-    clientEmail.parentNode.classList.remove("sucess")
-    clientEmail.parentNode.classList.add("error")
-    emailConfirm.disabled = true
-    button.disabled = true
-  } else {
+  if (clientEmail.value.match(regexEmail)) {
     clientEmail.parentNode.classList.remove("error")
     clientEmail.parentNode.classList.add("sucess")
     emailConfirm.disabled = false
     button.disabled = false
+  } else {
+    clientEmail.parentNode.classList.remove("sucess")
+    clientEmail.parentNode.classList.add("error")
+    emailConfirm.disabled = true
+    button.disabled = true
   }
 }
 
 const confirmEmail = event => {
-  const clientEmailConfirm = event.target
   const email = document.querySelector('input[name="email"]')
-  if (clientEmailConfirm.value === email.value) {
-    clientEmailConfirm.parentNode.classList.remove("error")
-    clientEmailConfirm.parentNode.classList.add("sucess")
-    email.parentNode.classList.add("sucess")
+  if (emailConfirm.value === email.value) {
+    emailConfirm.parentNode.classList.remove("error")
+    emailConfirm.parentNode.classList.add("sucess")
     button.disabled = false
   } else {
-    clientEmailConfirm.parentNode.classList.remove("sucess")
-    // email.parentNode.classList.remove("sucess")
-    clientEmailConfirm.parentNode.classList.add("error")
+    emailConfirm.parentNode.classList.remove("sucess")
+    emailConfirm.parentNode.classList.add("error")
     button.disabled = true
   }
 }
 
 const phoneMask = () => {
-  if (phone.value.length == 11) {
+  if (phone.value.length === 11) {
     phone.setAttribute("type", "text")
     phone.value = phone.value.replace(/^(\d{2})(\d)(\d{4})(\d{4})/g, "($1) $2 $3-$4");
   }
