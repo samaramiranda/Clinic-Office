@@ -3,17 +3,11 @@
 @import url("./header.css");
 @import url("./animation.css");
 
-:root {
-  --background-color-focus: #4a659b;
-  --background-color-button: #60b49c;
-  --background-color-button-focus: #44927c;
-}
-
 body {
+  background-color: var(--background-color);
+  font-family: 'Open Sans', sans-serif;
   margin: 0;
   padding: 0;
-  background-color: #f2f2f2;
-  font-family: 'Open Sans', sans-serif;
   animation: fade 0.5s;
 }
 
@@ -37,7 +31,7 @@ div#data input {
 }
 
 div#data input:focus {
-  border: 2px solid var(--background-color-focus);
+  border: 2px solid #4a659b;
 }
 
 div#data input.validate-error {
