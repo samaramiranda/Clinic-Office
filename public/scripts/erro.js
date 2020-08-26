@@ -12,14 +12,14 @@ const returnIndex = () => {
 }
 
 body.addEventListener("animationstart", event => {
-  if (event.animationName = "down") {
+  if (event.animationName == "down") {
     document.querySelector("body").style.overflow = "hidden"
   }
 })
 
 body.addEventListener("animationend", event => {
   if (event.animationName == "down") {
-    location.href = "../../index.html"
+    location.href = "../views/index.html"
     body.style.display = "none"
     document.querySelector("body").style.overflow = "none"
   }

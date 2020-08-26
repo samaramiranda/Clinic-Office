@@ -20,7 +20,7 @@ const handleButton = () => {
     })
   } else {
     localStorage.setItem("name", input.value)
-    location.href = "public/views/cadastro.html"
+    location.href = "../views/cadastro.html"
   }
 }
 
