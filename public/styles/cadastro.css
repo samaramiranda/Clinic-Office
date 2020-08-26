@@ -105,15 +105,21 @@ div.sucess input {
 }
 
 div#app a {
-  color: #6B87BF;
   display: flex;
   justify-content: center;
+  color: #6B87BF;
+  width: 30px;
+  margin: auto;
 }
 
 @media (max-width: 600px) {
   body {
     text-align: center;
     width: 100%;
+  }
+
+  header p {
+    padding: 3px 7px;
   }
 
   form {
