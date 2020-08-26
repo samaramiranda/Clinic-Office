@@ -2,7 +2,6 @@
 @import url("./footer.css");
 @import url("./header.css");
 @import url("./animation.css");
-
 :root {
   --background-color-focus: #4a659b;
 }
@@ -45,7 +44,7 @@ div#sucess button:hover {
   background-color: var(--background-color-focus);
 }
 
-div#sucess{
+div#sucess {
   animation: move 0.9s;
 }
 
@@ -53,4 +52,15 @@ div#sucess{
   animation: down 0.2s;
   animation-fill-mode: forwards;
   animation-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+@media (max-width: 600px) {
+  body {
+    text-align: center;
+    width: 100%;
+  }
+
+  div#sucess {
+    width: 80%;
+  }
 }

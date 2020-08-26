@@ -55,3 +55,14 @@ div#error{
   animation-fill-mode: forwards;
   animation-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);
 }
+
+@media (max-width: 600px) {
+  body {
+    text-align: center;
+    width: 100%;
+  }
+
+  div#error {
+    width: 80%;
+  }
+}

@@ -18,7 +18,7 @@ body {
 div#data {
   text-align: center;
   display: grid;
-  width: 800px;
+  width: 80%;
   margin: 40px auto;
 }
 
@@ -65,4 +65,11 @@ div#data button:hover {
 
 div#data input, button {
   animation: move 0.9s;
+}
+
+@media (max-width: 600px){
+  body {
+    text-align: center;
+    width: 100%;
+  }
 }

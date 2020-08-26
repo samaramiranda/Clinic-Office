@@ -27,10 +27,14 @@ footer div#location p::before {
 
 footer div#fixedFooter {
   background-color: #e7e7e7;
-  /* padding: 30px;
-  position:fixed;
-  bottom:0;
-  width: 100%; */
   margin-top: 20px;
   padding: 35px;
+}
+
+@media (max-width: 600px){
+  div#footerContent {
+    flex-wrap: wrap;
+    grid-template-columns: 1fr;
+    padding: 5%;
+  }
 }

@@ -2,7 +2,6 @@
 @import url("./footer.css");
 @import url("./header.css");
 @import url("./animation.css");
-
 :root {
   --background-color-focus: #4a659b;
 }
@@ -112,4 +111,21 @@ div#app a {
   color: var(--background-color);
   display: flex;
   justify-content: center;
+}
+
+@media (max-width: 600px) {
+  body {
+    text-align: center;
+    width: 100%;
+  }
+
+  form {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    max-width: 80%;
+    margin: 0 auto;
+    justify-content: center;
+    margin: 8% auto;
+  }
 }
