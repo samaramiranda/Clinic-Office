@@ -75,7 +75,9 @@ const getCities = event => {
 
   const url = `https://servicodados.ibge.gov.br/api/v1/localidades/estados/${stateValue}/municipios`
 
+  $('select[name="city"]').select2();
   city.innerHTML = '<option value="">Cidade</option>'
+  city.disabled = true
 
   fetch(url)
     .then(res => {
