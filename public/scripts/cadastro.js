@@ -94,7 +94,7 @@ const getCities = event => {
 
 const validateFields = event => {
   const selectedField = event.target
-  if (selectedField.value === "") {
+  if (selectedField.value.trim() === "") {
     return selectedField.parentNode.classList.add("error")
   } else if (selectedField.name === "email") {
     return validateEmail(event)
