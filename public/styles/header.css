@@ -1,9 +1,5 @@
-:root {
-  --background-color: #6B87BF;
-}
-
 header {
-  background-color: var(--background-color);
+  background-color: #6B87BF;
   padding: 3px;
   text-align: center;
 }
